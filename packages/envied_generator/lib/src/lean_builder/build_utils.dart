@@ -13,7 +13,7 @@ import 'package:lean_builder/element.dart';
 /// ```
 void throwIf(bool condition, String message, {Element? element}) {
   if (condition) {
-    throwError(message, element: element);
+    throw InvalidGenerationSourceError(message, element: element);
   }
 }
 
@@ -27,7 +27,7 @@ void throwIf(bool condition, String message, {Element? element}) {
 /// ```dart
 /// throwError('Invalid type: $typeName', element: field);
 /// ```
-void throwError(String message, {Element? element}) {
+Never throwError(String message, {Element? element}) {
   throw InvalidGenerationSourceError(message, element: element);
 }
 

@@ -1,8 +1,5 @@
 import 'package:envied/envied.dart';
 import 'package:lean_builder/element.dart';
-import 'package:lean_builder/type.dart';
-
-import 'build_utils.dart';
 
 /// Resolves @Envied and @EnviedField annotations from lean_builder elements.
 ///
@@ -177,17 +174,6 @@ class LeanEnviedResolver {
 
     return null;
   }
-
-  /// Resolves complete field information including type validation.
-  ///
-  /// This method combines field element inspection with annotation resolution
-  /// to create a complete [EnviedFieldInfo] object. It validates that the
-  /// field has an explicit type declaration.
-  ///
-  /// Parameters:
-  /// - [field]: The field element from the analyzed class
-  /// - [annotation]: The @EnviedField annotation on this field
-  ///
 }
 
 /// Configuration extracted from @EnviedField annotation.
@@ -258,4 +244,3 @@ class EnviedFieldConfig {
     this.randomSeed,
   });
 }
-
